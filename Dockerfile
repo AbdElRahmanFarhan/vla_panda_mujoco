@@ -29,6 +29,7 @@ RUN mkdir -p ${ROS_WS}/src
 WORKDIR ${ROS_WS}
 COPY deps.repos .
 RUN vcs import src < deps.repos
+RUN rm deps.repos
 
 
 # Install ROS dependencies

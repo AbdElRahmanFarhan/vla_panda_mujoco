@@ -1,0 +1,13 @@
+services:
+  panda_moveit_mujoco:
+    image: panda_moveit_mujoco:latest
+    container_name: panda_moveit_mujoco
+    network_mode: "host"
+    environment:
+      - DISPLAY=${DISPLAY:-:0}
+      - QT_X11_NO_MITSHM=1
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:ro
+    stdin_open: true 
+    tty: true 
+    restart: "no"
