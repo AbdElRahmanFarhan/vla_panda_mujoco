@@ -27,7 +27,7 @@ RUN tar -xzf "mujoco-${MUJOCO_VERSION}-linux-${CPU_ARCH}.tar.gz" -C $(dirname "$
 ENV ROS_WS="/home/ros2_ws/"
 RUN mkdir -p ${ROS_WS}/src
 WORKDIR ${ROS_WS}
-COPY deps.repos src/
+COPY deps.repos .
 RUN vcs import src < deps.repos
 
 
