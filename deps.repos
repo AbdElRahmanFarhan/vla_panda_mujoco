@@ -10,4 +10,4 @@ repositories:
   moveit_resources:
     type: git
     url: https://github.com/AbdElRahmanFarhan/moveit_resources.git
-    version: ros2_mujoco
+    version: humble_mujoco

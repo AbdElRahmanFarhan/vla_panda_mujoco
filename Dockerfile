@@ -34,8 +34,11 @@ RUN rm deps.repos
 
 # Install ROS dependencies
 RUN rosdep update && rosdep install --from-paths src/ --ignore-src -y
-RUN sudo apt install -y ros-humble-rqt-joint-trajectory-controller
-
+RUN apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y \
+    ros-${ROS_DISTRO}-rqt \
+    ros-${ROS_DISTRO}-rqt-common-plugins \
+    ros-${ROS_DISTRO}-rqt-joint-trajectory-controller
 
 # Compile
 RUN . /opt/ros/${ROS_DISTRO}/setup.bash && \
