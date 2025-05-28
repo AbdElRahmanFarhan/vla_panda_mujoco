@@ -1,13 +1,13 @@
 repositories:
-  franka_ros2:
-    type: git
-    url: https://github.com/AbdElRahmanFarhan/franka_ros2.git
-    version: humble
   mujoco_ros2_control:
     type: git
     url: https://github.com/moveit/mujoco_ros2_control.git
     version: main
-  mujoco_menagerie:
+  panda_mujoco_bringup:
     type: git
-    url: https://github.com/google-deepmind/mujoco_menagerie.git
+    url: https://github.com/AbdElRahmanFarhan/panda_mujoco_bringup.git
     version: main
+  moveit_resources:
+    type: git
+    url: https://github.com/AbdElRahmanFarhan/moveit_resources.git
+    version: ros2_mujoco
