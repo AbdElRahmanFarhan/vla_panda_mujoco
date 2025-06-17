@@ -10,6 +10,8 @@ services:
       - /tmp/.X11-unix:/tmp/.X11-unix:ro
       - /home/abdelrahman/workspace/panda_mujoco_bringup:/home/ros2_ws/src/panda_mujoco_bringup
       - /home/abdelrahman/workspace/moveit_resources:/home/ros2_ws/src/moveit_resources
+      - /home/abdelrahman/workspace/panda_control:/home/ros2_ws/src/panda_control
+      - /home/abdelrahman/workspace/panda_mujoco_lerobot:/home/ros2_ws/src/panda_mujoco_lerobot
 
     stdin_open: true 
     tty: true 

@@ -30,7 +30,7 @@ WORKDIR ${ROS_WS}
 COPY deps.repos .
 RUN vcs import src < deps.repos
 RUN rm deps.repos
-
+RUN pip install mujoco
 
 # Install ROS dependencies
 RUN rosdep update && rosdep install --from-paths src/ --ignore-src -y
